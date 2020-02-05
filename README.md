@@ -10,10 +10,18 @@ Separate growing instance of any size, that can make decidions, based on interna
 Is self-sustained, and can be fully functional without external control.
 Can be separate pot, growbox, room, etc.
 
+Communication within the node should be reliable, thus all components must be connected via wires and using theese protocols:
+ * one-wire - for sensors
+ * i2c - for complicated devices
+ * other - as exception.
+
+
 ### Cluster
 Nodes can be connected to clusters in a Master-Master or Master-Slave mode.
 Cluster behaves like a single node.
 General purpose of cluster is to make centralized heating/lightning system and make decidions based on aggregated data, which is not accesible to a single node. (Like CO2 concentration or EC/PH level).
+
+internode communication can be done wirelesly via wifi or esp-mesh
 
 
 ### IoT backend
